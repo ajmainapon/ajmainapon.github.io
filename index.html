@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Ajmain Istiak — Robotics & ML Engineer</title>
+  <title>Md. Ajmain Istiak — Robotics &amp; ML Researcher</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,21 +16,44 @@
 
 <body data-page="home">
 
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar__logo">
-      <span class="logo-initials">AI</span>
+  <!-- STICKY TOP HEADER NAVBAR -->
+  <header class="header">
+    <div class="header__container">
+      <a href="#home" class="header__logo">
+        <span class="logo-initials">Ajmain Istiak</span>
+      </a>
+      <nav class="header__nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Expertise</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#publications" class="nav-link">Publications &amp; Research</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
     </div>
+  </header>
 
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <a href="#home" class="header__logo">
+      <span class="logo-initials">Ajmain Istiak</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <nav class="sidebar" id="sidebar">
     <ul class="sidebar__links">
-      <li><a href="#home" class="nav-link"> <span class="nav-icon">⌂</span><span class="nav-label">Home</span></a></li>
-      <li><a href="#projects" class="nav-link"> <span class="nav-icon">◈</span><span class="nav-label">Works</span></a>
-      </li>
-      <li><a href="#education" class="nav-link"> <span class="nav-icon">◻</span><span
-            class="nav-label">Education</span></a></li>
-      <li><a href="#research" class="nav-link"> <span class="nav-icon">⬡</span><span
-            class="nav-label">Research</span></a></li>
-      <li><a href="#contact" class="nav-link"> <span class="nav-icon">◎</span><span class="nav-label">Contact</span></a>
-      </li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Expertise</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#publications" class="nav-link">Publications &amp; Research</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 
     <div class="sidebar__socials">
@@ -43,15 +66,6 @@
     </div>
   </nav>
 
-  <header class="mobile-header">
-    <div class="sidebar__logo">
-      <span class="logo-initials">AI</span>
-    </div>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
   <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
   <main class="main-content">
@@ -61,72 +75,107 @@
       <div class="hero-text">
         <p class="hero-greeting hero-stagger">Hello, I'm</p>
         <h1 class="hero-heading hero-stagger">Md. Ajmain Istiak Apon</h1>
-        <p class="hero-role hero-stagger">Robotics & ML Researcher</p>
+        <p class="hero-role hero-stagger">Robotics &amp; Machine Learning Researcher</p>
+        <p class="hero-affiliations hero-stagger">
+          Department of Robotics &amp; Mechatronics Engineering, University of Dhaka
+        </p>
         <p class="hero-sub hero-stagger">
-          Building and shipping in <span class="accent">PyTorch</span> and <span class="accent">FastAPI</span> —
-          spanning object detection to self-supervised medical segmentation and graph-guided latent diffusion.
+          I am a final-year undergraduate building controllable perception, latent world models, and generative models in <span class="accent">PyTorch</span> — spanning volumetric medical segmentation, controllable latent diffusion, and autonomous system planning. I am actively seeking PhD opportunities in Machine Learning and Computer Vision for Fall 2026.
         </p>
         <div class="hero-cta hero-stagger">
-          <a href="#projects" class="btn btn--primary">View My Work</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn--ghost">Resume</a>
+          <a href="#publications" class="btn btn--primary">View Research</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn--ghost">Curriculum Vitae (PDF)</a>
         </div>
       </div>
-      <div class="hero-photo hero-stagger" aria-hidden="true">
-        <img src="profile.png" alt="Md. Ajmain Istiak Istiak Profile Photo" />
+      <div class="hero-photo-container hero-stagger" aria-hidden="true">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo">
+          <img src="img.png" alt="Md. Ajmain Istiak Profile Photo" />
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT & NEWS SECTION -->
     <section id="about" class="section">
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
+        
+        <!-- Biography & Research Statement -->
         <div class="card about-bio">
           <p>
-            I'm a final-year <span class="accent">Robotics & Mechatronics Engineering</span> undergraduate at the <span
-              class="accent">University of Dhaka</span>, graduating <span class="accent">October 2026</span>.
+            I am a final-year <span class="accent">Robotics &amp; Mechatronics Engineering</span> undergraduate at the <span
+              class="accent">University of Dhaka</span>, graduating in <span class="accent">October 2026</span>. 
           </p>
           <p>
-            My applied work spans <span class="accent">object detection with YOLOv11</span>, a senior thesis on <span
-              class="accent">memorability-steered latent diffusion</span>, and an independent project on <span
-              class="accent">label-efficient 3D medical segmentation</span> via self-supervised ViT pretraining. I've
-            also sharpened my algorithmic thinking with <span class="accent">500+ Codeforces problems</span> in C++.
+            My research lies at the intersection of generative models, controllable perception, and self-supervised AI. Specifically, I am interested in how structure and self-supervision can cleanly steer what a neural network learns in low-data regimes, mitigating high annotation costs.
           </p>
           <p>
-            I'm deeply interested in the intersection of generative models, perception, and controllable AI —
-            specifically how structure and self-supervision can cleanly steer what a model learns in low-data regimes.
+            Currently, I am conducting senior thesis research on steering <span class="accent">Latent Diffusion Models</span> via graph-embedded spatial guidance to improve memorability, as well as independent work on label-efficient <span class="accent">3D medical segmentation</span> via volumetric self-supervised pretraining (JEPA). Previously, I curated and trained YOLOv11 pipelines for stomata micro-image detection in a funded institutional project.
           </p>
-          <div class="about-tags">
+          <p>
+            Beyond research, I am a passionate problem solver, having solved <span class="accent">500+ competitive programming challenges</span> in C++ on Codeforces.
+          </p>
+          
+          <h3 class="interests-title">Research Interests</h3>
+          <ul class="interests-list">
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>Controllable Generative Models:</strong> Latent Diffusion, cross-attention steering, graph guidance.</span></li>
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>Self-Supervised Representation Learning:</strong> Joint-Embedding Predictive Architectures (JEPA), few-shot learning.</span></li>
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>World Models &amp; Embodied AI:</strong> Action-conditioned world models, physical system dynamics, planning in latent space.</span></li>
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>Medical Image Computing:</strong> 3D medical volume segmentation, Vision Transformers (ViTs), label efficiency.</span></li>
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>Controllable Robot Perception:</strong> Object detection, localized spatial representation.</span></li>
+          </ul>
+
+          <div class="about-tags" style="margin-top: 28px;">
             <span class="tag">Computer Vision</span>
             <span class="tag">SSL / JEPA</span>
             <span class="tag">Latent Diffusion</span>
+            <span class="tag">World Models</span>
             <span class="tag">PyTorch</span>
-            <span class="tag">FastAPI</span>
+            <span class="tag">C++</span>
             <span class="tag">Competitive Programming</span>
           </div>
         </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <span class="stat-number" data-count="500" data-suffix="+">0</span>
-            <span class="stat-label">Codeforces Problems</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-count="0.992" data-decimals="3">0</span>
-            <span class="stat-label">mAP@0.5 (YOLOv11)</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-count="60" data-suffix="%">0</span>
-            <span class="stat-label">Memorability Uplift</span>
+
+        <!-- News & Updates timeline -->
+        <div class="card news-container">
+          <h3>News &amp; Updates</h3>
+          <div class="news-feed">
+            <div class="news-item">
+              <span class="news-date">Oct 2025</span>
+              <span class="news-text">Appointed <strong>President</strong> of the Robotics &amp; Mechatronics Student Club, University of Dhaka.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Oct 2025</span>
+              <span class="news-text">Initiated Senior Research Thesis: <em>Generative Memorability — Steering Latent Diffusion via Graph Guidance</em>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Jun 2025</span>
+              <span class="news-text">Began independent work on <em>Label-Efficient 3D Medical Segmentation via Volumetric SSL Pretraining</em>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Jan 2025</span>
+              <span class="news-text">Completed funded undergraduate research project: <em>Stomata Detection in Microscopy Images with YOLOv11</em>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Mar 2024</span>
+              <span class="news-text">Appointed <strong>Program Coordinator</strong> at the IEEE Robotics &amp; Automation Society, University of Dhaka.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Sep 2022</span>
+              <span class="news-text">Started B.Sc. in <strong>Robotics &amp; Mechatronics Engineering</strong> at the University of Dhaka.</span>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- TECHNICAL EXPERTISE SECTION -->
     <section id="skills" class="section">
       <h2 class="section-title">Technical Expertise</h2>
       <div class="skills-grid">
         <div class="card skill-group">
-          <h3 class="skill-group__title">Languages</h3>
+          <h3 class="skill-group__title">Programming Languages</h3>
           <div class="skill-pills">
             <span class="pill">Python</span>
             <span class="pill">C++</span>
@@ -135,26 +184,9 @@
             <span class="pill">JavaScript</span>
             <span class="pill">LaTeX</span>
           </div>
-          <div class="skill-bars">
-            <div class="skill-bar"><span>C++</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:90%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>Python</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:85%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>SQL</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:70%"></div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="card skill-group">
-          <h3 class="skill-group__title">ML &amp; Deep Learning</h3>
+          <h3 class="skill-group__title">Machine Learning &amp; Deep Learning</h3>
           <div class="skill-pills">
             <span class="pill">PyTorch</span>
             <span class="pill">TensorFlow</span>
@@ -163,77 +195,29 @@
             <span class="pill">MONAI</span>
             <span class="pill">CUDA / AMP</span>
           </div>
-          <div class="skill-bars">
-            <div class="skill-bar"><span>PyTorch</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:85%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>Transformers / ViT</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:75%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>TensorFlow</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:65%"></div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="card skill-group">
-          <h3 class="skill-group__title">Computer Vision &amp; LLMs</h3>
+          <h3 class="skill-group__title">Computer Vision &amp; Generative AI</h3>
           <div class="skill-pills">
             <span class="pill">OpenCV</span>
             <span class="pill">Roboflow</span>
             <span class="pill">YOLOv11</span>
             <span class="pill">Stable Diffusion</span>
+            <span class="pill">World Models (JEPA)</span>
             <span class="pill">U-Net / ViT</span>
             <span class="pill">LangChain</span>
             <span class="pill">LangGraph</span>
           </div>
-          <div class="skill-bars">
-            <div class="skill-bar"><span>OpenCV / Roboflow</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:80%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>Diffusion Models</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:72%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>LangChain / LangGraph</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:65%"></div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="card skill-group">
-          <h3 class="skill-group__title">Backend &amp; APIs</h3>
+          <h3 class="skill-group__title">Backend &amp; Infrastructure</h3>
           <div class="skill-pills">
             <span class="pill">FastAPI</span>
             <span class="pill">SQLAlchemy</span>
             <span class="pill">Pydantic</span>
             <span class="pill">OAuth2 / JWT</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar"><span>FastAPI</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:80%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>SQLAlchemy / Pydantic</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:75%"></div>
-              </div>
-            </div>
-            <div class="skill-bar"><span>Auth (OAuth2/JWT)</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:72%"></div>
-              </div>
-            </div>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Git / GitHub</span>
           </div>
         </div>
       </div>
@@ -245,125 +229,149 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-role">Undergraduate Research Assistant</h3>
               <span class="timeline-date">2024 — 2025</span>
             </div>
             <p class="timeline-org">University of Dhaka — Funded Research Project</p>
-            <p class="timeline-desc">Worked on the funded research project <span class="accent">Stomata Detection with
-                YOLOv11</span>. Trained a YOLOv11n model to localize stomata in plant-leaf microscopy, achieving <span
-                class="accent">0.992 mAP@0.5</span> and 0.836 mAP@0.5:0.95. Curated a 300+ image dataset in Roboflow and
-              built the full training pipeline with augmentation, train/validation split, and held-out evaluation.</p>
+            <p class="timeline-desc">Investigated <span class="accent">Stomata Detection with YOLOv11</span>. Trained a YOLOv11n model to localize stomata in microscopic plant-leaf imaging, achieving <span class="accent">0.992 mAP@0.5</span> and 0.836 mAP@0.5:0.95. Handled a 300+ custom microscopic image dataset in Roboflow, developing complete training workflows, validation parameters, and held-out evaluations.</p>
             <div class="timeline-tags">
-              <span class="tag">Research</span><span class="tag">YOLOv11</span><span class="tag">Object
-                Detection</span><span class="tag">Roboflow</span>
+              <span class="tag">Research</span><span class="tag">YOLOv11</span><span class="tag">Object Detection</span><span class="tag">Roboflow</span>
             </div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-role">President</h3>
               <span class="timeline-date">Oct 2025 — Present</span>
             </div>
             <p class="timeline-org">Robotics &amp; Mechatronics Student Club, University of Dhaka</p>
-            <p class="timeline-desc">Leading the club's strategic direction, overseeing technical and non-technical
-              activities, and representing members at the institutional level. Driving initiatives that connect students
-              with industry and research opportunities.</p>
+            <p class="timeline-desc">Leading strategic and technical research directions, coordinating workshops on autonomous systems, representing student members in university forums, and establishing institutional research partnerships.</p>
             <div class="timeline-tags">
-              <span class="tag">Leadership</span><span class="tag">Strategy</span><span class="tag">Community</span>
+              <span class="tag">Leadership</span><span class="tag">Autonomous Systems</span><span class="tag">Community Organization</span>
             </div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-role">Program Coordinator</h3>
               <span class="timeline-date">Mar 2024 — Apr 2025</span>
             </div>
-            <p class="timeline-org">IEEE Robotics &amp; Automation Society, University of Dhaka</p>
-            <p class="timeline-desc">Coordinated technical programs and workshops that connected students with
-              cutting-edge robotics research. Led initiatives fostering a community of engineers passionate about
-              autonomous systems.</p>
+            <p class="timeline-org">IEEE Robotics &amp; Automation Society Student Chapter, University of Dhaka</p>
+            <p class="timeline-desc">Coordinated academic seminars, hands-on workshops, and collaborative robotics challenges connecting student researchers with international robotics and automation guidelines.</p>
             <div class="timeline-tags">
-              <span class="tag">IEEE</span><span class="tag">Robotics</span><span class="tag">Leadership</span>
+              <span class="tag">IEEE</span><span class="tag">Robotics</span><span class="tag">Academic Seminars</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <h2 class="section-title">Works &amp; Projects</h2>
-      <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ml">ML / CV</button>
-        <button class="filter-btn" data-filter="backend">Software</button>
-        <button class="filter-btn" data-filter="research">Research</button>
+    <!-- SCHOLARLY PUBLICATIONS & RESEARCH -->
+    <section id="publications" class="section">
+      <h2 class="section-title">Publications &amp; Research</h2>
+      
+      <div class="pub-list">
+        
+        <!-- Publication 1 -->
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-type">Senior Thesis · Active</span>
+          </div>
+          <a href="#publications" class="pub-title">Generative Memorability — Steering Latent Diffusion via Graph-Embedded Spatial Guidance</a>
+          <div class="pub-authors">
+            <strong>Md. Ajmain Istiak Apon</strong>, Faculty Advisor.
+          </div>
+          <div class="pub-venue">
+            Senior Research Thesis, Department of Robotics &amp; Mechatronics Engineering, University of Dhaka, 2025–2026
+          </div>
+          <p class="pub-desc">
+            Integrated <span class="accent">AMNet memorability guidance</span> into a Latent Diffusion Model workflow, steering visual generation toward highly memorable configurations while preserving fidelity. Achieved a <span class="accent">+60% memorability uplift</span> across a 20-prompt evaluation set, validated using <span class="accent">ResMem</span> as a scoring model. Currently extending the architecture with graph-embedded spatial guidance via cross-attention adjustments and custom U-Net steering.
+          </p>
+          <div class="pub-links">
+            <a href="resume.pdf" class="pub-link-badge" target="_blank">[Thesis Proposal]</a>
+            <a href="https://github.com/onlyapon" class="pub-link-badge" target="_blank">[Code]</a>
+          </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-type">Preprint · Ongoing</span>
+          </div>
+          <a href="#publications" class="pub-title">Label-Efficient Volumetric Medical Segmentation via Volumetric SSL Pretraining</a>
+          <div class="pub-authors">
+            <strong>Md. Ajmain Istiak Apon</strong>, Independent Researcher.
+          </div>
+          <div class="pub-venue">
+            Preprint in preparation, 2025
+          </div>
+          <p class="pub-desc">
+            Designing a label-efficient 3D segmentation pipeline using <span class="accent">ViT-Base</span> coupled with <span class="accent">Joint-Embedding Predictive Architecture (JEPA)</span>. Targeting competitive volumetric segmentations using only <span class="accent">3–5 annotated scans</span>. Implementing self-supervised pretraining on <span class="accent">1,200+ unannotated CT scans</span> (TotalSegmentator) utilizing 90% slice masking to capture robust global spatial geometries under hardware-constrained gradient accumulation parameters.
+          </p>
+          <div class="pub-links">
+            <a href="resume.pdf" class="pub-link-badge" target="_blank">[Project Proposal]</a>
+            <a href="https://github.com/onlyapon" class="pub-link-badge" target="_blank">[Code]</a>
+          </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-type">Funded Research · Technical Report</span>
+          </div>
+          <a href="#publications" class="pub-title">Stomata Detection in Microscopy Images of Plant Leaves with YOLOv11</a>
+          <div class="pub-authors">
+            <strong>Md. Ajmain Istiak Apon</strong>, Under Funded Research Project Team.
+          </div>
+          <div class="pub-venue">
+            Technical Research Report, University of Dhaka, 2024
+          </div>
+          <p class="pub-desc">
+            Implemented a robust <span class="accent">YOLOv11n</span> model to localize stomata in microscopical leaf imaging, benchmarked at <span class="accent">0.992 mAP@0.5</span> and <span class="accent">0.836 mAP@0.5:0.95</span>. Curated, augmented, and annotated a 300+ plant-leaf microscopy image database in Roboflow. Developed complete pipelines for data split, augmentation parameters, and held-out validation.
+          </p>
+          <div class="pub-links">
+            <a href="https://github.com/onlyapon" class="pub-link-badge" target="_blank">[Technical Report]</a>
+            <a href="https://github.com/onlyapon" class="pub-link-badge" target="_blank">[Dataset]</a>
+            <a href="https://github.com/onlyapon" class="pub-link-badge" target="_blank">[Code]</a>
+          </div>
+        </div>
+
       </div>
-      <div class="projects-grid" id="projectsGrid">
-        <div class="card project-card" data-category="ml">
-          <div class="project-card__header">
-            <span class="project-type">ML / CV</span>
-            <div class="project-links">
-              <a href="https://github.com/onlyapon" target="_blank" rel="noopener" title="GitHub"
-                class="project-link">GitHub ↗</a>
+
+      <!-- SELECTED SOFTWARE & SYSTEMS -->
+      <h3 class="sub-section-title">Selected Software &amp; Systems</h3>
+      <div class="software-grid">
+        
+        <div class="card software-card">
+          <div class="software-header">
+            <h4 class="software-title">Production-Ready REST API with JWT Auth</h4>
+            <div class="software-links">
+              <a href="https://github.com/onlyapon" target="_blank" rel="noopener" class="software-link">[GitHub]</a>
             </div>
           </div>
-          <h3 class="project-title">Stomata Detection with YOLOv11</h3>
-          <p class="project-desc">Trained a YOLOv11n object detector on 300+ annotated microscopy images to localize
-            stomata in plant leaves. Achieved <span class="accent">0.992 mAP@0.5</span> and 0.836 mAP@0.5:0.95
-            (precision 0.969, recall 0.966) with a custom Roboflow pipeline.</p>
-          <div class="project-stack">
-            <span class="pill">YOLOv11</span><span class="pill">PyTorch</span><span class="pill">Roboflow</span><span
-              class="pill">OpenCV</span>
-          </div>
+          <p class="software-desc">
+            A secure multi-router FastAPI service for web authoring backends. Features OAuth2 password-flow authorization, JWT bearer token issuance, dependency-injected session databases, and comprehensive ORM routing.
+          </p>
         </div>
-        <div class="card project-card" data-category="research">
-          <div class="project-card__header">
-            <span class="project-type">Research · Ongoing</span>
-          </div>
-          <h3 class="project-title">Label-Efficient Medical Segmentation</h3>
-          <p class="project-desc">Building a 3D medical segmentation pipeline using <span class="accent">ViT-Base +
-              JEPA</span>, targeting competitive accuracy with 3–5 annotated volumes. SSL pretraining on 1,200+ CT scans
-            via 90% slice masking.</p>
-          <div class="project-stack">
-            <span class="pill">ViT / JEPA</span><span class="pill">PyTorch</span><span class="pill">MONAI</span>
-          </div>
-        </div>
-        <div class="card project-card" data-category="research">
-          <div class="project-card__header">
-            <span class="project-type">Senior Thesis</span>
-          </div>
-          <h3 class="project-title">Generative Memorability Guidance</h3>
-          <p class="project-desc">Integrated <span class="accent">AMNet</span> memorability guidance into Stable
-            Diffusion, achieving a <span class="accent">+60% memorability uplift</span> across a 20-prompt eval set.
-            Extending with graph-embedded spatial guidance.</p>
-          <div class="project-stack">
-            <span class="pill">PyTorch</span><span class="pill">Stable Diffusion</span><span class="pill">AMNet</span>
-          </div>
-        </div>
-        <div class="card project-card" data-category="backend">
-          <div class="project-card__header">
-            <span class="project-type">Backend</span>
-            <div class="project-links">
-              <a href="https://github.com/onlyapon" target="_blank" rel="noopener" title="GitHub"
-                class="project-link">GitHub ↗</a>
+
+        <div class="card software-card">
+          <div class="software-header">
+            <h4 class="software-title">Algorithmic Problem Solving Portfolio</h4>
+            <div class="software-links">
+              <a href="https://codeforces.com/profile/fynm" target="_blank" rel="noopener" class="software-link">[Codeforces]</a>
             </div>
           </div>
-          <h3 class="project-title">REST API with JWT Auth</h3>
-          <p class="project-desc">Multi-router FastAPI service for an articles/authors blog backend. Features OAuth2
-            password-flow login issuing JWT bearer tokens, dependency-injected DB sessions, and comprehensive ORM
-            routing.</p>
-          <div class="project-stack">
-            <span class="pill">FastAPI</span><span class="pill">SQLAlchemy</span><span class="pill">Pydantic
-              v2</span><span class="pill">JWT</span>
-          </div>
+          <p class="software-desc">
+            A comprehensive repository compiling optimal solutions for 500+ competitive programming challenges in C++ on Codeforces. Solutions span complex graph algorithms, advanced dynamic programming, greedy methods, and tree structures.
+          </p>
         </div>
+
       </div>
     </section>
 
@@ -373,16 +381,13 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
               <h3 class="timeline-role">B.Sc. in Robotics &amp; Mechatronics Engineering</h3>
               <span class="timeline-date">Sep 2022 — Expected Oct 2026</span>
             </div>
             <p class="timeline-org">University of Dhaka</p>
-            <p class="timeline-desc">Final-year undergraduate focused on machine learning, computer vision, and robot
-              perception. Relevant coursework: Machine Learning, Artificial Intelligence, Intelligent Systems and
-              Robotics, Digital Image Processing and Robot Vision, Digital Signal Processing, Linear Algebra, and
-              Statistics for Engineers.</p>
+            <p class="timeline-desc">Focusing on robot vision, controllable perception, and deep generative models. Relevant coursework includes: Machine Learning, Artificial Intelligence, Digital Image Processing and Robot Vision, Digital Signal Processing, Linear Algebra, and Engineering Statistics.</p>
             <div class="timeline-tags">
               <span class="tag">Machine Learning</span>
               <span class="tag">Artificial Intelligence</span>
@@ -395,122 +400,49 @@
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-role">Higher Secondary, General Science</h3>
+              <h3 class="timeline-role">Higher Secondary School Certificate (Science)</h3>
               <span class="timeline-date">Jul 2019 — Dec 2021</span>
             </div>
-            <p class="timeline-org" style="margin-bottom: 0;">Cantonment Public School and College, Rangpur</p>
+            <p class="timeline-org">Cantonment Public School and College, Rangpur</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="card timeline-content">
+          <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-role">Secondary</h3>
+              <h3 class="timeline-role">Secondary School Certificate</h3>
               <span class="timeline-date">Jan 2011 — May 2019</span>
             </div>
-            <p class="timeline-org" style="margin-bottom: 0;">Police Lines School and College Rangpur</p>
+            <p class="timeline-org">Police Lines School and College, Rangpur</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- RESEARCH SECTION -->
-    <section id="research" class="section">
-      <h2 class="section-title">Research Contributions</h2>
-      <div class="research-grid">
-        <div class="card research-card">
-          <div class="research-card__header">
-            <span class="research-status">Active · Senior Thesis</span>
-          </div>
-          <h3 class="research-title">Generative Memorability — Steering Latent Diffusion via Graph-Embedded Spatial
-            Guidance</h3>
-          <p class="research-desc">Integrated <span class="accent">AMNet memorability guidance</span> into a Latent
-            Diffusion Model workflow. Steering generation toward more memorable outputs while preserving fidelity.
-            Achieved a <span class="accent">+60% memorability uplift</span> across a 20-prompt evaluation set,
-            independently validated with <span class="accent">ResMem</span> as a scorer. Extending the pipeline with
-            graph-embedded spatial guidance via custom U-Net modifications and cross-attention steering, benchmarked
-            against Stable Diffusion baselines under faculty supervision.</p>
-          <div class="research-tags">
-            <span class="tag">Latent Diffusion</span><span class="tag">Stable Diffusion</span><span
-              class="tag">AMNet</span><span class="tag">ResMem</span><span class="tag">U-Net</span><span
-              class="tag">Cross-Attention</span>
-          </div>
-        </div>
-        <div class="card research-card">
-          <div class="research-card__header">
-            <span class="research-status">Active · Independent</span>
-          </div>
-          <h3 class="research-title">Label-Efficient Medical Segmentation via SSL Volumetric Prediction</h3>
-          <p class="research-desc">Designing a label-efficient 3D segmentation pipeline using <span
-              class="accent">ViT-Base</span> with <span class="accent">Joint-Embedding Predictive Architecture
-              (JEPA)</span>, targeting competitive accuracy with only <span class="accent">3–5 annotated volumes</span>.
-            Self-supervised pretraining on <span class="accent">1,200+ unannotated CT scans</span> (TotalSegmentator) to
-            learn global spatial geometry via <span class="accent">90% slice masking</span>. Built a
-            hardware-constrained training workflow on a single 24GB RTX 3090 using <span class="accent">AMP</span> and
-            gradient accumulation. Few-shot fine-tuning freezes the ViT backbone and trains a 1×1 Conv decoder,
-            benchmarked against fully supervised <span class="accent">nnU-Net</span> baselines.</p>
-          <div class="research-tags">
-            <span class="tag">ViT</span><span class="tag">JEPA</span><span class="tag">Self-Supervised</span><span
-              class="tag">Medical Imaging</span><span class="tag">MONAI</span><span class="tag">nnU-Net</span><span
-              class="tag">CUDA / AMP</span>
-          </div>
-        </div>
-        <div class="card research-card">
-          <div class="research-card__header">
-            <span class="research-status">Completed · 2024–2025 · Funded</span>
-          </div>
-          <h3 class="research-title">Stomata Detection in Microscopy Images with YOLOv11</h3>
-          <p class="research-desc">Undergraduate Research Assistant on a funded project at the University of Dhaka.
-            Trained a <span class="accent">YOLOv11n</span> model to detect and localize stomata in microscopy images of
-            plant leaves — <span class="accent">0.992 mAP@0.5</span>, <span class="accent">0.836 mAP@0.5:0.95</span>
-            (precision 0.969, recall 0.966). Curated a custom dataset of 300+ images annotated in Roboflow and built the
-            full training pipeline with augmentation, train/validation split, and held-out evaluation.</p>
-          <div class="research-tags">
-            <span class="tag">YOLOv11</span><span class="tag">Object Detection</span><span
-              class="tag">Roboflow</span><span class="tag">Computer CV</span>
-          </div>
-        </div>
-        <div class="card research-card">
-          <div class="research-card__header">
-            <span class="research-status">Ongoing</span>
-          </div>
-          <h3 class="research-title">Algorithmic Problem Solving &amp; Competitive Programming</h3>
-          <p class="research-desc">500+ problems solved on Codeforces (handle: <span class="accent">fynm</span>) across
-            dynamic programming, graph theory, greedy, and advanced data structures — sharpening the algorithmic
-            foundation that underpins my ML and robotics work.</p>
-          <div class="research-tags">
-            <span class="tag">Algorithms</span><span class="tag">Graph Theory</span><span class="tag">Dynamic
-              Programming</span><span class="tag">C++</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT & SCHOLARLY INQUIRIES -->
     <section id="contact" class="section">
       <h2 class="section-title">Get In Touch</h2>
       <div class="contact-grid">
         <div class="contact-info">
           <p class="contact-intro">
-            I'm currently exploring PhD opportunities and am highly open to discussing <span class="accent">ML /
-              computer vision</span> and <span class="accent">generative AI research</span> applications.
+            I am highly open to discussing <strong>PhD recruitment opportunities</strong>, research collaborations, and academic applications in deep learning and computer vision.
           </p>
           <div class="contact-links">
-            <a href="mailto:ajmain.apon123@gmail.com" class="contact-item card">
+            <a href="mailto:mdajmainistiak-2021811401@rme.du.ac.bd" class="contact-item">
               <span class="contact-icon">@</span>
               <div>
-                <span class="contact-label">Email</span>
-                <span class="contact-value">ajmain.apon123@gmail.com</span>
+                <span class="contact-label">Academic Contact Email</span>
+                <span class="contact-value">mdajmainistiak-2021811401@rme.du.ac.bd</span>
               </div>
             </a>
             <a href="https://linkedin.com/in/ajmain-istiak-902672140" target="_blank" rel="noopener" class="contact-item card">
               <span class="contact-icon">in</span>
               <div>
-                <span class="contact-label">LinkedIn</span>
+                <span class="contact-label">LinkedIn Research Profile</span>
                 <span class="contact-value">ajmain-istiak</span>
               </div>
             </a>
@@ -523,18 +455,19 @@
             </a>
           </div>
         </div>
+        
         <form class="card contact-form" id="contactForm" name="contact" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" />
+            <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" required />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="off" />
+            <input type="email" id="email" name="email" placeholder="Academic / Research Email" autocomplete="off" required />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your thought or inquiry.."></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Your research inquiry or message..." required></textarea>
           </div>
           <button type="submit" class="btn btn--primary">Send Message</button>
         </form>
@@ -545,7 +478,7 @@
 
   <footer class="footer">
     <span class="footer-copy">
-      © 2026 Md. Ajmain Istiak
+      © 2026 Md. Ajmain Istiak — Department of Robotics &amp; Mechatronics Engineering, University of Dhaka
     </span>
     <div class="footer-links">
       <a href="https://github.com/ajmainapon" target="_blank" rel="noopener">GitHub</a>
