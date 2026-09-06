@@ -113,7 +113,7 @@
             Currently, I am conducting senior thesis research on steering <span class="accent">Latent Diffusion Models</span> via predicted memorability guidance (<span class="accent">GenMem</span>), as well as first-author research (under review at <span class="accent">WACV 2027</span>) on label-efficient <span class="accent">3D medical CT segmentation</span> via 2.5D Joint-Embedding Predictive Architecture (I-JEPA) pretraining. Previously, I developed instance-segmentation benchmarks for stomatal phenotyping in a funded research project.
           </p>
           <p>
-            Additionally, I am an active competitive programmer, having solved <span class="accent">500+ algorithmic challenges</span> in C++ on Codeforces (handle: <a href="https://codeforces.com/profile/fynm" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">fynm</a>).
+            Additionally, I am an active competitive programmer, having solved <span class="accent">500+ algorithmic challenges</span> in C++ on Codeforces (handle: <a href="https://codeforces.com/profile/fynm" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">fynm</a>). Most recently, my team <span class="accent">NeurAps</span> won the <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">Insight 2.0 Datathon 2026</a> (<span class="accent">Champion</span> of 79 teams), a SEER lung-cancer survival prediction challenge organized by the IASDS Students' Club, University of Dhaka.
           </p>
           
           <h3 class="interests-title">Research Interests</h3>
@@ -133,6 +133,7 @@
             <span class="tag">FastAPI / JWT</span>
             <span class="tag">C++</span>
             <span class="tag">Codeforces (500+)</span>
+            <span class="tag">Insight 2.0 Datathon Champion</span>
           </div>
         </div>
 
@@ -140,6 +141,10 @@
         <div class="card news-container">
           <h3>News &amp; Updates</h3>
           <div class="news-feed">
+            <div class="news-item">
+              <span class="news-date">Sep 2026</span>
+              <span class="news-text"><strong>Champion</strong> of the <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">Insight 2.0 Datathon 2026</a> with Team <strong>NeurAps</strong> — 1st of 79 teams after the Grand Finale (private weighted F1 0.880 on SEER lung-cancer survival classification), organized by IASDS, University of Dhaka.</span>
+            </div>
             <div class="news-item">
               <span class="news-date">Apr 2026</span>
               <span class="news-text">Built a multi-router <strong>FastAPI REST service</strong> with OAuth2 &amp; JWT authentication (<code>ajmainapon/FASTAPI-Project</code>).</span>
@@ -197,6 +202,8 @@
             <span class="pill">OpenCV</span>
             <span class="pill">MONAI</span>
             <span class="pill">Roboflow</span>
+            <span class="pill">Gradient Boosting (LightGBM / XGBoost / CatBoost)</span>
+            <span class="pill">Optuna</span>
           </div>
         </div>
         <div class="card skill-group">
@@ -214,6 +221,7 @@
           <h3 class="skill-group__title">Competitive Programming &amp; Tools</h3>
           <div class="skill-pills">
             <span class="pill">Codeforces (500+ Solved)</span>
+            <span class="pill">Insight 2.0 Datathon 2026 (Champion)</span>
             <span class="pill">Git / GitHub</span>
             <span class="pill">CUDA / AMP</span>
             <span class="pill">Nibabel</span>
@@ -344,7 +352,35 @@
           </div>
         </div>
 
-        <!-- Project 3: Stomatal Phenotyping -->
+        <!-- Project 3: Insight 2.0 Datathon (Champion) -->
+        <div class="pub-item">
+          <div class="pub-header">
+            <span class="pub-type">Data Science Competition · Champion</span>
+          </div>
+          <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener" class="pub-title">Insight 2.0 Datathon 2026 — Cancer Survival Classification (Team NeurAps)</a>
+          <div class="pub-authors">
+            <strong>Md. Ajmain Istiak Apon</strong> <em>(Team NeurAps)</em>
+          </div>
+          <div class="pub-venue">
+            IASDS Students' Club, Institute of Applied Statistics &amp; Data Science, University of Dhaka | 27 Aug – 5 Sep 2026
+          </div>
+          <div class="pub-desc">
+            <ul style="margin-left: 18px; line-height: 1.65;">
+              <li><strong>Champion</strong> among 79 teams — 4th on the private leaderboard (weighted F1 <strong>0.8804</strong>) and <strong>1st overall</strong> after the Grand Finale; the task was predicting <code>vital_status</code> (Alive / Dead) for 36,000 SEER lung-cancer patients from 24,000 labelled records with 36 clinical features, engineered to 53.</li>
+              <li>Built a blend of <strong>LightGBM, XGBoost and CatBoost</strong>, each trained plainly and again with 7,455 high-confidence pseudo-labelled test rows, plus 5% each of RandomForest, ExtraTrees and a neural network; decision threshold optimized to 0.575.</li>
+              <li>Gated every modelling decision through stratified 10-fold out-of-fold cross-validation (seeds 42 / 2026 / 7), split-half verification and Optuna tuning across 28 logged experiments; identified right-censoring by diagnosis year as the dominant survival signal and resolved a leakage path before final submission selection.</li>
+            </ul>
+            <div style="margin-top: 8px; font-size: 12.5px; color: var(--text-dim);">
+              <strong>Stack:</strong> Python, scikit-learn, LightGBM, XGBoost, CatBoost, Optuna, Jupyter, uv
+            </div>
+          </div>
+          <div class="pub-links">
+            <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener" class="pub-link-badge">[GitHub Repository: ajmainapon/datathon-Insight2.0-NeurAps]</a>
+            <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps/blob/main/certificate/certificate.pdf" target="_blank" rel="noopener" class="pub-link-badge">[Certificate of Achievement]</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Stomatal Phenotyping -->
         <div class="pub-item">
           <div class="pub-header">
             <span class="pub-type">Funded Research · Paper Submitted</span>
