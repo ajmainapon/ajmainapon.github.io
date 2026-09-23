@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Md. Ajmain Istiak Apon — Robotics &amp; ML Researcher</title>
-  <meta name="description" content="Portfolio of Md. Ajmain Istiak Apon, Robotics & Mechatronics Engineering student at University of Dhaka. Researcher in Generative Models, Volumetric Medical Segmentation, and Stomatal Phenotyping." />
+  <meta name="description" content="Portfolio of Md. Ajmain Istiak Apon, Robotics & Mechatronics Engineering student at University of Dhaka. Researcher in Self-Supervised CT Pretraining, Generative Models, and Stomatal Phenotyping. First-author paper under review at WACV 2027." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,7 +79,7 @@
           Department of Robotics &amp; Mechatronics Engineering, University of Dhaka
         </p>
         <p class="hero-sub hero-stagger">
-          Final-year undergraduate researcher focused on self-supervised representation learning (<span class="accent">I-JEPA</span>) for 3D medical CT segmentation, training-free latent diffusion guidance (<span class="accent">GenMem</span>), and instance-segmentation benchmarking in <span class="accent">PyTorch</span>. Actively seeking PhD opportunities in Machine Learning and Computer Vision for Fall 2026.
+          Final-year undergraduate researcher focused on self-supervised 2.5D CT pretraining (<span class="accent">JEPA</span>) for label-efficient medical segmentation, training-free latent diffusion guidance (<span class="accent">GenMem</span>), and instance-segmentation benchmarking in <span class="accent">PyTorch</span>. Actively seeking PhD opportunities in Machine Learning and Computer Vision for Fall 2026.
         </p>
         <div class="hero-cta hero-stagger">
           <a href="#publications" class="btn btn--primary">View Research &amp; Projects</a>
@@ -115,7 +115,7 @@
             My research spans self-supervised representation learning, controllable text-to-image generative models, and computer vision benchmarks. I am particularly interested in how self-supervision and training-free guidance can steer neural network representations in low-data regimes.
           </p>
           <p>
-            Currently, I am conducting senior thesis research on steering <span class="accent">Latent Diffusion Models</span> via predicted memorability guidance (<span class="accent">GenMem</span>), as well as first-author research (under review at <span class="accent">WACV 2027</span>) on label-efficient <span class="accent">3D medical CT segmentation</span> via 2.5D Joint-Embedding Predictive Architecture (I-JEPA) pretraining. Previously, I developed instance-segmentation benchmarks for stomatal phenotyping in a funded research project.
+            Currently, I am conducting senior thesis research on steering <span class="accent">Latent Diffusion Models</span> via predicted memorability guidance (<span class="accent">GenMem</span>), as well as first-author research (under review at <span class="accent">WACV 2027</span>, Datasets Track) titled <em>Mind the Gap</em>, a controlled evaluation of context–target slice separation and masking geometry in 2.5D joint-embedding predictive (JEPA) pretraining for <span class="accent">label-efficient CT segmentation</span>. Previously, I developed instance-segmentation benchmarks for stomatal phenotyping in a funded research project.
           </p>
           <p>
             Additionally, I am an active competitive programmer, having solved <span class="accent">500+ algorithmic challenges</span> in C++ on Codeforces (handle: <a href="https://codeforces.com/profile/fynm" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">fynm</a>). Most recently, my team <span class="accent">NeurAps</span> won the <a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener" class="accent" style="text-decoration: underline;">Insight 2.0 Datathon 2026</a> (<span class="accent">Champion</span> of 79 teams), a SEER lung-cancer survival prediction challenge organized by the IASDS Students' Club, University of Dhaka.
@@ -123,7 +123,7 @@
           
           <h3 class="interests-title">Research Interests</h3>
           <ul class="interests-list">
-            <li class="interests-item"><span class="accent">▸</span> <span><strong>Self-Supervised Representation Learning:</strong> Joint-Embedding Predictive Architecture (I-JEPA), 2.5D CT slice triplets, ViT-B/16, volumetric medical segmentation.</span></li>
+            <li class="interests-item"><span class="accent">▸</span> <span><strong>Self-Supervised Representation Learning:</strong> Joint-Embedding Predictive Architectures (I-JEPA), 2.5D cross-slice prediction, masking geometry, ViT-B/16, evaluation protocols for medical SSL.</span></li>
             <li class="interests-item"><span class="accent">▸</span> <span><strong>Controllable Generative Models:</strong> Text-to-image latent diffusion guidance, DDIM sampling trajectories, memorability optimization (AMNet, ResMem).</span></li>
             <li class="interests-item"><span class="accent">▸</span> <span><strong>Computer Vision &amp; Instance Segmentation:</strong> Roboflow, COCO benchmarks, YOLOv8s-seg, YOLO26s-seg, Mask R-CNN, automated trait extraction.</span></li>
             <li class="interests-item"><span class="accent">▸</span> <span><strong>REST Backend Architecture:</strong> FastAPI, SQLAlchemy ORM, Pydantic v2 schemas, OAuth2 / JWT security.</span></li>
@@ -131,7 +131,7 @@
 
           <div class="about-tags" style="margin-top: 28px;">
             <span class="tag">PyTorch</span>
-            <span class="tag">I-JEPA / SSL</span>
+            <span class="tag">JEPA / SSL Pretraining</span>
             <span class="tag">Latent Diffusion (GenMem)</span>
             <span class="tag">Medical CT Segmentation</span>
             <span class="tag">YOLO26s-seg / Mask R-CNN</span>
@@ -156,7 +156,7 @@
             </div>
             <div class="news-item">
               <span class="news-date">Jan 2026</span>
-              <span class="news-text">First-author paper under review at <strong>WACV 2027 (Evaluation and Dataset Track)</strong>: <em>Self-Supervised Learning for Label-Efficient Medical CT Segmentation</em>.</span>
+              <span class="news-text">First-author paper under review at <strong>WACV 2027 (Datasets Track)</strong>: <em>Mind the Gap: A Controlled Evaluation of Slice Separation and Masking in Self-Supervised CT Pretraining</em>.</span>
             </div>
             <div class="news-item">
               <span class="news-date">Jan 2026</span>
@@ -334,19 +334,20 @@
           <div class="pub-header">
             <span class="pub-type">First-Author Paper · Under Review</span>
           </div>
-          <a href="https://github.com/ajmainapon/SSLR" target="_blank" rel="noopener" class="pub-title">Self-Supervised Learning for Label-Efficient Medical CT Segmentation</a>
+          <a href="https://github.com/ajmainapon/SSLR" target="_blank" rel="noopener" class="pub-title">Mind the Gap: A Controlled Evaluation of Slice Separation and Masking in Self-Supervised CT Pretraining</a>
           <div class="pub-authors">
             <strong>Md. Ajmain Istiak Apon</strong> <em>(First Author)</em>
           </div>
           <div class="pub-venue">
-            Submitted / Under Review at WACV 2027 (Evaluation and Dataset Track) | Jan 2026 – Present
+            Under Review at WACV 2027 (Datasets Track), Paper #3086 | Jan 2026 – Sep 2026
           </div>
           <div class="pub-desc">
             <ul style="margin-left: 18px; line-height: 1.65;">
-              <li>Adapted <strong>I-JEPA</strong> to 2.5D CT slice triplets with a ViT-B/16 backbone and EMA target encoder on 1,228 unlabeled TotalSegmentator volumes; LOO ablation showed natural-image design choices invert on medical CT—narrow slice gap yielded the A3 backbone, improving linear-probe Dice by <strong>44–124%</strong>.</li>
-              <li>A3 features significantly outperform random init under frozen and fine-tuned probing at N=20/50/100 labels (Welch t: p=0.017 at N=20, p&lt;0.001 at N=50); achieved <strong>67% recovery of nnU-Net supervised performance</strong> at N=50, liver reaching <strong>90%</strong>; seed variance reduced 1.3–2.2×.</li>
-              <li>Validated cross-dataset transfer on AMOS22-CT (<strong>+158–260% over random init</strong>) and cross-modality CT→MR (<strong>+41–48% at N=20/50</strong>); reproduced collapsing SSL gain on 3D SwinUNETR, confirming cross-architecture robustness.</li>
-            </ul>
+              <li>Built <strong>I-JEPA-CT</strong>, a 2.5D cross-slice joint-embedding predictive pretraining pipeline (ViT-B/16 context encoder, EMA target encoder, 4-layer Transformer predictor) trained on 1,082 unlabeled TotalSegmentator CT volumes for ~333k iterations on a single GPU.</li>
+              <li>Ran a controlled <strong>2×2 factorial study</strong> over context–target slice gap and masking geometry across five label budgets; contrary to video-SSL intuition, <strong>narrowing the slice gap</strong> (A2) improved linear-probe Dice by <strong>53–202%</strong> over the wide-gap baseline and dominated the masking factor, while combining both changes underperformed A2 by 12–17%, exposing a <strong>non-additive interaction</strong>.</li>
+              <li>Showed that the measured SSL benefit is <strong>protocol-dependent</strong>: A2 gains <strong>+102–118%</strong> over random init under linear probing but only <strong>+13.0 / +8.5 / +2.8%</strong> under end-to-end fine-tuning at N=20/50/100 (Welch t: p=0.017, p&lt;0.001, p=0.054), with fine-tuning seed variance reduced <strong>1.3–2.2×</strong>; A2 recovers <strong>67% of supervised nnU-Net</strong> Dice at N=50 (liver 90%).</li>
+              <li>Tested robustness via cross-dataset transfer to AMOS22-CT (<strong>+158–260%</strong> over random init), CT→MR transfer with no MR pretraining (<strong>+41–48%</strong>), and a matched 3D SwinUNETR comparison that reproduces the same label-dependent decline in fine-tuning gain.</li>
+              </ul>
             <div style="margin-top: 8px; font-size: 12.5px; color: var(--text-dim);">
               <strong>Stack:</strong> PyTorch, timm, MONAI, Nibabel, CUDA
             </div>
@@ -454,7 +455,7 @@
               <span class="timeline-date">Expected Oct 2026</span>
             </div>
             <p class="timeline-org">University of Dhaka, Dhaka, Bangladesh</p>
-            <p class="timeline-desc">Focusing on machine learning, self-supervised computer vision, and generative diffusion models.</p>
+            <p class="timeline-desc">Focusing on machine learning, self-supervised pretraining for medical imaging, and generative diffusion models.</p>
             <p style="margin-top: 8px; font-size: 13.5px; color: var(--text-muted);">
               <strong>Relevant Coursework:</strong> Machine Learning, Artificial Intelligence, Intelligent Systems and Robotics, Digital Image Processing and Robot Vision, Digital Signal Processing, Linear Algebra, Statistics for Engineers.
             </p>
