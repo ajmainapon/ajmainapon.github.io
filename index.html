@@ -161,7 +161,7 @@
             </div>
             <div class="news-item">
               <span class="news-date">2024 – 2025</span>
-              <span class="news-text">Completed funded research project: <em>Stomatal Phenotyping — 506-image Instance-Segmentation Benchmark</em> (paper submitted to <em>Frontiers in Plant Science</em>).</span>
+              <span class="news-text">Completed funded research project: <em>Stomatal Phenotyping Under Drought Stress in Chickpea</em> (second-author paper submitted to <em>Frontiers in Plant Science</em>).</span>
             </div>
             <div class="news-item">
               <span class="news-date">Mar 2024</span>
@@ -225,13 +225,13 @@
               <span class="timeline-date">2024 — 2025</span>
             </div>
             <p class="timeline-org">
-              University of Dhaka — Funded Research Project: Stomatal Phenotyping <em>(paper submitted to Frontiers in Plant Science)</em>
+              University of Dhaka — Funded Research Project: Stomatal Phenotyping <em>(second-author paper submitted to Frontiers in Plant Science)</em>
               <a href="https://github.com/ajmainapon/StomataAI" target="_blank" rel="noopener" class="pub-link-badge" style="margin-left: 8px;">[ajmainapon/StomataAI]</a>
             </p>
             <ul class="timeline-bullet-list" style="margin-top: 10px; margin-left: 18px; color: var(--text-muted); font-size: 14px; line-height: 1.65;">
-              <li>Built a <strong>506-image two-class instance-segmentation benchmark</strong> (6,605 guard-cell-complex and pore annotations) from chickpea leaf microscopy; annotated in Roboflow, exported in COCO format with locked train/val/test splits (359/99/48 images).</li>
-              <li>Benchmarked <strong>YOLOv8s-seg</strong>, <strong>YOLO26s-seg</strong>, and <strong>Mask R-CNN</strong> on identical splits; YOLO26s-seg achieved <strong>0.707 box mAP@0.50</strong> and <strong>0.638 mask mAP@0.50</strong>, Mask R-CNN led in mask mAP@0.50:0.95 (<strong>0.428</strong>) on the locked 48-image held-out test.</li>
-              <li>Automated stomatal density and pore-index extraction from predicted masks, validated against manual counts (p &lt; 0.05); performed PCA and t-test analyses linking morpho-physiological and stomatal traits to drought-stress responses in <em>C. arietinum</em>.</li>
+              <li>Benchmarked <strong>YOLOv8s-seg</strong>, <strong>YOLO26s-seg</strong>, and <strong>Mask R-CNN</strong> on a <strong>512-image</strong> two-class chickpea microscopy dataset (7,424 guard-cell-complex and pore instances), using identical image-level splits (359/77/76), a locked test set, and three training seeds per architecture.</li>
+              <li>On the pooled test set, YOLO26s-seg led mask mAP@0.50 (<strong>0.605 ± 0.011</strong>) and Mask R-CNN led mask mAP@0.50:0.95 (<strong>0.440 ± 0.008</strong>); class-specific evaluation showed the pore class, not architecture choice, is the bottleneck (pore AP 0.05–0.17 vs. guard-cell AP 0.70–0.82).</li>
+              <li>Compared AI-derived with manual stomatal counts on the locked test set (per-plant R² 0.73–0.77, with systematic overcounting) and co-wrote the manuscript.</li>
             </ul>
             <div class="timeline-tags" style="margin-top: 14px;">
               <span class="tag">Instance Segmentation</span>
@@ -239,7 +239,6 @@
               <span class="tag">Mask R-CNN</span>
               <span class="tag">Roboflow</span>
               <span class="tag">COCO Format</span>
-              <span class="tag">PCA / Statistics</span>
             </div>
           </div>
         </div>
@@ -367,20 +366,20 @@
         <!-- Project 4: Stomatal Phenotyping -->
         <div class="pub-item">
           <div class="pub-header">
-            <span class="pub-type">Funded Research · Paper Submitted</span>
+            <span class="pub-type">Second-Author Paper · Submitted</span>
           </div>
-          <a href="https://github.com/ajmainapon/StomataAI" target="_blank" rel="noopener" class="pub-title">Stomatal Phenotyping: Instance-Segmentation Benchmark</a>
+          <a href="https://github.com/ajmainapon/StomataAI" target="_blank" rel="noopener" class="pub-title">Stomatal Phenotyping Under Drought Stress in Chickpea (<em>Cicer arietinum</em> L.) Using Deep-Learning Instance-Segmentation Models</a>
           <div class="pub-authors">
-            <strong>Md. Ajmain Istiak Apon</strong> <em>(Undergraduate Research Assistant)</em>
+            N. J. Nashiha, <strong>A. I. Apon</strong>, F. Afrin, M. A. Arrafi, M. A. Rahman, M. A. Kashem, S. E. Arman, M. Z. Hossain
           </div>
           <div class="pub-venue">
             University of Dhaka — Funded Research Project · Submitted to <em>Frontiers in Plant Science</em> | 2024 – 2025
           </div>
           <div class="pub-desc">
             <ul style="margin-left: 18px; line-height: 1.65;">
-              <li>Built a <strong>506-image two-class instance-segmentation benchmark</strong> (6,605 guard-cell-complex and pore annotations) from chickpea leaf microscopy; annotated in Roboflow, exported in COCO format with locked train/val/test splits (359/99/48 images).</li>
-              <li>Benchmarked <strong>YOLOv8s-seg</strong>, <strong>YOLO26s-seg</strong>, and <strong>Mask R-CNN</strong> on identical splits; YOLO26s-seg achieved <strong>0.707 box mAP@0.50</strong> and <strong>0.638 mask mAP@0.50</strong>, Mask R-CNN led in mask mAP@0.50:0.95 (<strong>0.428</strong>) on the locked 48-image held-out test.</li>
-              <li>Automated stomatal density and pore-index extraction from predicted masks, validated against manual counts (p &lt; 0.05); performed PCA and t-test analyses linking morpho-physiological and stomatal traits to drought-stress responses in <em>C. arietinum</em>.</li>
+              <li>Benchmarked <strong>YOLOv8s-seg</strong>, <strong>YOLO26s-seg</strong>, and <strong>Mask R-CNN</strong> on a <strong>512-image</strong> two-class chickpea microscopy dataset (7,424 guard-cell-complex and pore instances), using identical image-level splits (359/77/76), a locked test set, and three training seeds per architecture.</li>
+              <li>On the pooled test set, YOLO26s-seg led mask mAP@0.50 (<strong>0.605 ± 0.011</strong>) and Mask R-CNN led mask mAP@0.50:0.95 (<strong>0.440 ± 0.008</strong>); class-specific evaluation showed the pore class, not architecture choice, is the bottleneck (pore AP 0.05–0.17 vs. guard-cell AP 0.70–0.82).</li>
+              <li>Compared AI-derived with manual stomatal counts on the locked test set (per-plant R² 0.73–0.77, with systematic overcounting) and co-wrote the manuscript.</li>
             </ul>
           </div>
           <div class="pub-links">
