@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff">
+<title>Research | Ajmain Istiak Apon</title>
+<meta name="description" content="Ajmain Istiak Apon, University of Dhaka. Research in navigation world models and LLM reasoning. PhD interests in RLVR and LLM post-training.">
+<link rel="icon" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=20261113-academic">
+<script src="main.js?v=20261113-academic" defer></script></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header><div class="nav-wrap"><a class="brand" href="./"><strong>Ajmain</strong> Istiak Apon</a><button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Main navigation"><a href="./" >about</a><a href="research.html" aria-current="page">research</a><a href="./#news">news</a><a href="resume.pdf" target="_blank" rel="noopener">cv ↗</a><a href="./#contact">contact</a></nav><button class="theme-toggle" aria-label="Switch to dark theme" title="Toggle color theme">◐</button></div></header>
+<main id="content" class="page"><h1>research</h1><p class="subtitle">World models, LLM reasoning, and earlier work in self-supervised vision.</p><p class="research-intro">My intended PhD directions are navigation world models, LLM post-training, and RLVR. The projects below distinguish completed experiments from ongoing work; manuscript entries do not imply publication or acceptance.</p><h2 class="year">2026</h2><article class="publication" id="research-0">
+  <div class="pub-label"><span>NWM</span></div>
+  <div class="pub-body"><h3>Navigation World Models: Auditing Action Interfaces</h3><p class="pub-meta">Research project · Completed experiments; manuscript</p><p class="pub-description">Action-coordinate and normalization mismatches in world-model evaluation, with paired rollout comparisons and cross-model fault injections.</p>
+  <div class="pub-actions"></div>
+  <details><summary>Details</summary><div class="abstract"><ul><li>Identified mismatches between training and rollout action representations in released NWM evaluation: coordinate frames, affine-normalization offsets, and yaw wrapping. Implemented corrected action construction and model-free reconstruction checks.</li><li>In a paired RECON evaluation (150 clips, 20 trajectories, seed 0, 250 diffusion steps), correcting the interface reduced mean DreamSim error from <strong>0.240 to 0.139</strong>: a 0.101 reduction with trajectory-cluster 95% CI [0.076, 0.123], without retraining.</li><li>Completed attribution, seed and frame-rate checks, and dataset comparisons. The improvement was substantially smaller on Go Stanford and SCAND, bounding the original result.</li><li>Extended fault-injection experiments to <strong>EgoWM and RAE-NWM</strong> on 90 clips from 19 trajectories with three seeds and paired comparisons within GPU type. Tested faults increased perceptual error; injected faults do not establish existing bugs in those models.</li><li><strong>Scope:</strong> image-prediction fidelity and action-representation sensitivity. Improved closed-loop navigation success has not been demonstrated.</li></ul></div></details></div>
+</article><article class="publication" id="research-1">
+  <div class="pub-label"><span>LLM</span></div>
+  <div class="pub-body"><h3>No Changes Needed: Why Self-Correction Repeats Wrong Math Answers, and What Independent Sampling Recovers</h3><p class="pub-meta">Research manuscript</p><p class="pub-description">Wrong-draft anchoring, counterfactual edits, and independent verification on Qwen and Llama models.</p>
+  <div class="pub-actions"></div>
+  <details><summary>Details</summary><div class="abstract"><ul><li>Studied why a language model shown its own complete but incorrect solution often accepts and repeats the error instead of re-deriving the answer. Compared draft-conditioned repair with independent, draft-free sampling.</li><li>Implemented correction and preservation LoRA editors, action-relative controllers, and later verification experiments. A <strong>506-draft counterfactual study</strong> examined whether the derivation or stated conclusion drives repetition.</li><li>Evaluated confidence-aware verification and adaptive sampling on <strong>Qwen2.5-Coder-7B and Llama-3.1-8B</strong>, with 200 development and 600 held-out numeric MATH prompts per model, paired comparisons, and explicit token-cost accounting.</li><li>Reported failed pre-specified hypotheses and null comparisons. The manuscript attributes the measured verification advantage to confidence weighting rather than a novel stopping rule; gains are modest and bounded to the tested setting.</li><li><strong>Research direction:</strong> reliable reasoning, verification, and inference-time computation; motivates my broader interest in LLM post-training and RLVR.</li></ul></div></details></div>
+</article><article class="publication" id="research-2">
+  <div class="pub-label"><span>SSL</span></div>
+  <div class="pub-body"><h3>Mind the Gap: A Controlled Evaluation of Slice Separation and Masking in Self-Supervised CT Pretraining</h3><p class="pub-meta">First-author research manuscript</p><p class="pub-description">A controlled study of context–target separation, masking, and label efficiency in medical CT pretraining.</p>
+  <div class="pub-actions"><a href="https://github.com/ajmainapon/SSLR" target="_blank" rel="noopener">Code ↗</a></div>
+  <details><summary>Details</summary><div class="abstract">
+            <ul>
+              <li>Built <strong>I-JEPA-CT</strong>, a 2.5D cross-slice joint-embedding predictive pretraining pipeline (ViT-B/16 context encoder, EMA target encoder, 4-layer Transformer predictor) trained on 1,082 unlabeled TotalSegmentator CT volumes for ~333k iterations on a single GPU.</li>
+              <li>Ran a controlled <strong>2×2 factorial study</strong> over context–target slice gap and masking geometry across five label budgets; contrary to video-SSL intuition, <strong>narrowing the slice gap</strong> (A2) improved linear-probe Dice by <strong>53–202%</strong> over the wide-gap baseline and dominated the masking factor, while combining both changes underperformed A2 by 12–17%, exposing a <strong>non-additive interaction</strong>.</li>
+              <li>Showed that the measured SSL benefit is <strong>protocol-dependent</strong>: A2 gains <strong>+102–118%</strong> over random init under linear probing but only <strong>+13.0 / +8.5 / +2.8%</strong> under end-to-end fine-tuning at N=20/50/100 (Welch t: p=0.017, p&lt;0.001, p=0.054), with fine-tuning seed variance reduced <strong>1.3–2.2×</strong>; A2 recovers <strong>67% of supervised nnU-Net</strong> Dice at N=50 (liver 90%).</li>
+              <li>Tested robustness via cross-dataset transfer to AMOS22-CT (<strong>+158–260%</strong> over random init), CT→MR transfer with no MR pretraining (<strong>+41–48%</strong>), and a matched 3D SwinUNETR comparison that reproduces the same label-dependent decline in fine-tuning gain.</li>
+              </ul></div></details></div>
+</article><article class="publication" id="research-3">
+  <div class="pub-label"><span>Diffusion</span></div>
+  <div class="pub-body"><h3>GenMem: Auditing Predicted-Memorability Guidance in Text-to-Image Diffusion</h3><p class="pub-meta">Undergraduate thesis · Manuscript in preparation</p><p class="pub-description">Training-free diffusion guidance with held-out predictor evaluation, reverse-guidance controls, and failure analysis.</p>
+  <div class="pub-actions"><a href="https://github.com/ajmainapon/GenMem" target="_blank" rel="noopener">Code ↗</a></div>
+  <details><summary>Details</summary><div class="abstract">
+            <ul>
+              <li>Implemented <strong>GenMem</strong>, a training-free guidance method that differentiates a pretrained memorability predictor (AMNet) through the DDIM sampling trajectory of Stable Diffusion, leaving all model weights frozen.</li>
+              <li>On DrawBench (n=200): held-out memorability rose <strong>+3.42% (ResMem)</strong> and <strong>+2.72% (ViTMem)</strong>, both p &lt; 10⁻⁸, with no significant CLIP-fidelity loss; replicated on COCO (n=200) with equal or larger effect sizes.</li>
+              <li>Validated causality via reverse-guidance symmetry and a null random-critic control; characterized proxy over-optimization in SDXL and mapped a three-regime dose–response curve across an 8-point guidance-weight sweep.</li>
+            </ul></div></details></div>
+</article><article class="publication" id="research-4">
+  <div class="pub-label"><span>Plant science</span></div>
+  <div class="pub-body"><h3>Stomatal Phenotyping Under Drought Stress in Chickpea Using Deep-Learning Instance-Segmentation Models</h3><p class="pub-meta">Submitted to Frontiers in Plant Science · Second author</p><p class="pub-description">A reproducible microscopy benchmark with locked splits, repeated seeds, and class-specific segmentation analysis.</p>
+  <div class="pub-actions"><a href="https://github.com/ajmainapon/StomataAI" target="_blank" rel="noopener">Code ↗</a></div>
+  <details><summary>Details</summary><div class="abstract">
+            <ul>
+              <li>Benchmarked <strong>YOLOv8s-seg</strong>, <strong>YOLO26s-seg</strong>, and <strong>Mask R-CNN</strong> on a <strong>512-image</strong> two-class chickpea microscopy dataset (7,424 guard-cell-complex and pore instances), using identical image-level splits (359/77/76), a locked test set, and three training seeds per architecture.</li>
+              <li>On the pooled test set, YOLO26s-seg led mask mAP@0.50 (<strong>0.605 ± 0.011</strong>) and Mask R-CNN led mask mAP@0.50:0.95 (<strong>0.440 ± 0.008</strong>); class-specific evaluation showed the pore class, not architecture choice, is the bottleneck (pore AP 0.05–0.17 vs. guard-cell AP 0.70–0.82).</li>
+              <li>Compared AI-derived with manual stomatal counts on the locked test set (per-plant R² 0.73–0.77, with systematic overcounting) and co-wrote the manuscript.</li>
+            </ul></div></details></div>
+</article><article class="publication" id="research-5">
+  <div class="pub-label"><span>Side project</span></div>
+  <div class="pub-body"><h3>Latent-PhyBridge: Physics-Conditioned Video-to-Audio Generation</h3><p class="pub-meta">Hobby research · Ongoing</p><p class="pub-description">Kinetic and material conditioning on frozen MMAudio. Initial experiments completed; physics-specific benefits remain unestablished.</p>
+  <div class="pub-actions"></div>
+  <details><summary>Details</summary><div class="abstract"><ul><li>Implemented and trained <strong>Cherry-1</strong> kinetic and material conditioning modules on a frozen MMAudio backbone, with baseline reproduction and a synthetic impact benchmark.</li><li>Completed paired analyses of speed, mass, spectral-centroid and decay behavior. Initial gains were small or generic; the experiments did <strong>not</strong> establish physics-specific improvements.</li><li>Exploring a grounded physics bottleneck in Cherry-2. Evaluation remains ongoing; this is a hobby research project rather than my intended PhD specialization.</li></ul></div></details></div>
+</article><article class="publication" id="research-6">
+  <div class="pub-label"><span>Award</span></div>
+  <div class="pub-body"><h3>Insight 2.0 Datathon 2026 — Team NeurAps</h3><p class="pub-meta">Champion · September 2026</p><p class="pub-description">Lung-cancer survival prediction from SEER data; first overall after the Grand Finale among 79 teams.</p>
+  <div class="pub-actions"><a href="https://github.com/ajmainapon/datathon-Insight2.0-NeurAps" target="_blank" rel="noopener">Code ↗</a></div>
+  <details><summary>Details</summary><div class="abstract">
+            <ul>
+              <li><strong>Champion</strong> among 79 teams — 4th on the private leaderboard (weighted F1 <strong>0.8804</strong>) and <strong>1st overall</strong> after the Grand Finale; the task was predicting <code>vital_status</code> (Alive / Dead) for 36,000 SEER lung-cancer patients from 24,000 labelled records with 36 clinical features, engineered to 53.</li>
+              <li>Built a blend of <strong>LightGBM, XGBoost and CatBoost</strong>, each trained plainly and again with 7,455 high-confidence pseudo-labelled test rows, plus 5% each of RandomForest, ExtraTrees and a neural network; decision threshold optimized to 0.575.</li>
+              <li>Gated every modelling decision through stratified 10-fold out-of-fold cross-validation (seeds 42 / 2026 / 7), split-half verification and Optuna tuning across 28 logged experiments; identified right-censoring by diagnosis year as the dominant survival signal and resolved a leakage path before final submission selection.</li>
+            </ul></div></details></div>
+</article></main>
+<footer><div>© 2026 Md. Ajmain Istiak Apon. <span>Last updated November 2026.</span></div><div>Academic layout inspired by <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.</div></footer>
+</body></html>
