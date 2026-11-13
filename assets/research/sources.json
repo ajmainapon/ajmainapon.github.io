@@ -1,0 +1,26 @@
+{
+  "nwm": {
+    "figure": 1,
+    "source": "NWM/output/nwm_cvpr2027_actionabi_three_levels/figures/fig_method.pdf"
+  },
+  "self-correction": {
+    "figure": 1,
+    "source": "Research/workspace/final_acl/figures/fig_prefix_dose_and_frequency.pdf"
+  },
+  "ct-jepa": {
+    "figure": 1,
+    "source": "ZWM-Thesis/cvpr27/workspace/final/fig_study_design.pdf"
+  },
+  "genmem": {
+    "figure": 1,
+    "source": "Senior Thesis/writtenbypaperorchestra/final/figures/fig_method_overview.png"
+  },
+  "stomata": {
+    "figure": 1,
+    "source": "Stomata Paper/SAT_v2/figures/Figure_1.pdf"
+  },
+  "phybridge": {
+    "figure": 1,
+    "source": "idea draft writter/output/latent_phybridge/figures/fig_architecture.pdf"
+  }
+}
