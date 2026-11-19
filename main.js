@@ -7,7 +7,7 @@ function setTheme(dark) {
 }
 let preference;
 try { preference = localStorage.getItem('portfolio-theme'); } catch {}
-setTheme(preference ? preference === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+setTheme(preference ? preference === 'dark' : true);
 theme.addEventListener('click', () => {
   const dark = !document.body.classList.contains('dark');
   setTheme(dark);
