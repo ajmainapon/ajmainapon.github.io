@@ -5,7 +5,7 @@
   },
   "self-correction": {
     "figure": 1,
-    "source": "Research/workspace/final_acl/figures/fig_prefix_dose_and_frequency.pdf"
+    "source": "Research/workspace/final/figures/fig_matched_design_overview.png"
   },
   "ct-jepa": {
     "figure": 1,
@@ -22,6 +22,6 @@
   },
   "phybridge": {
     "figure": 1,
-    "source": "idea draft writter/output/latent_phybridge/figures/fig_architecture.pdf"
+    "source": "Latent-PhyBridge/paper_orchestra/final/figures/fig_overview.png"
   }
 }

@@ -3,7 +3,7 @@ function setTheme(dark) {
   document.body.classList.toggle('dark', dark);
   theme.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   theme.setAttribute('aria-pressed', String(dark));
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#1c1c1d' : '#ffffff';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#1b191a' : '#ffffff';
 }
 let preference;
 try { preference = localStorage.getItem('portfolio-theme'); } catch {}
